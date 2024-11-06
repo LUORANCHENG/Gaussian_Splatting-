@@ -182,6 +182,44 @@ $$\Sigma = \begin{bmatrix}
 \sigma_{zx} & \sigma_{zy} & \sigma_z^2 
 \end{bmatrix}$$
 
+**问题4：我们从前面可知：椭球的形状是通过协方差矩阵去控制的，那么问题来了：协方差矩阵为什么可以控制椭球的形状？**
+
+回答：假设我们有一个标准的高斯分布：
+
+- $\mathbf{x} \sim \mathcal{N}(\vec{0}, I)$
+- 均值 $[0,0,0]$
+- 协方差矩阵
+
+$$I = \begin{bmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1
+\end{bmatrix}$$
+
+然后我们对这个标准的高斯分布进行仿射变换
+
+- $w=A \mathbf{x} +b$
+- $\mathbf{w} \sim \mathcal{N}(A \mu + b, A \cdot I \cdot A^T)$
+
+其中 $\Sigma=A \cdot I \cdot A^T$ 表示**任意高斯都可以看作是标准高斯通过仿射变换得到**，即任意椭球可以看作是球通过仿射变换得到的，所以说协方差矩阵控制了椭球的形状。
+
+**问题5：协方差矩阵为什么能用旋转和缩放矩阵去表达？**
+
+回答：由我们前面可知，对一个高斯分布进行仿射变换
+
+- $w=A \mathbf{x} +b$
+- $\mathbf{w} \sim \mathcal{N}(A \mu + b, A \Sigma A^T)$
+
+根据仿射变换的定义可知，这个A的本质就是一个旋转矩阵乘上一个缩放矩阵，即 $A=R \cdot S$
+
+代入到 $\Sigma=A \cdot I \cdot A^T$ 可得：
+
+$$\Sigma = A \cdot I \cdot A^T \\
+= R \cdot S \cdot I \cdot (R \cdot S)^T \\
+= R \cdot S \cdot (S)^T \cdot (R)^T$$
+
+所以协方差矩阵为什么能用旋转和缩放矩阵去表达
+
 ---
 
 - 具体来说就是在重建不充分的区域往往会有较大的梯度，我们可以设定一个梯度阈值，对超过梯度阈值的位置我们对椭球进行分裂或者克隆：
