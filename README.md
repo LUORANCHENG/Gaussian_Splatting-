@@ -122,6 +122,42 @@ $$\Sigma = \begin{pmatrix}
 
 $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$ 表示中心点为 $(0,0,0)$ 的标准椭球公式
 
+$A x^2 + B y^2 + C z^2 + 2 D x y + 2 E x z + 2 F y z = 1$ 表示引入了旋转和偏移后的椭球一般公式
+
+然后我们再结合高斯分布去看
+
+当一维高斯分布 $G(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$ 中的指数部分为常数时
+
+即 $-\frac{(x - \mu)^2}{2\sigma^2}=constant$ 时,G(x)表示一条等值线。
+
+![Figure_1](https://github.com/user-attachments/assets/3b1119ee-2e31-43ca-bb59-5e355a11af19)
+
+当二维高斯分布 $G(\mathbf{x}) = \frac{1}{2\pi |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$ 中的指数部分为常数时，
+
+即： $-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)=constant$ 时
+
+展开可得： $\frac{(x - \mu_1)^2}{\sigma_1^2} + \frac{(y - \mu_2)^2}{\sigma_2^2} - \frac{2 \sigma_{xy} (x - \mu_1)(y - \mu_2)}{\sigma_1 \sigma_2} = \text{constant}$
+
+表示的是一个椭圆（即常数越大，椭圆越小），这种椭圆通常被称为等概率密度轮廓线，即同一个椭圆上的每一点都是等概率的
+
+![Figure_2](https://github.com/user-attachments/assets/e8246202-bf62-430c-863c-9ea419115cd5)
+
+当三维高斯分布 $G(\mathbf{x}) = \frac{1}{(2\pi)^{3/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$ 中的指数部分为常数时：
+
+即： $-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)=constant$ 时
+
+展开可得： 
+
+$$\frac{(x - \mu_1)^2}{\sigma_1^2} + \frac{(y - \mu_2)^2}{\sigma_2^2} + \frac{(z - \mu_3)^2}{\sigma_3^2} - \frac{2 \sigma_{xy} (x - \mu_1)(y - \mu_2)}{\sigma_1 \sigma_2} - \frac{2 \sigma_{xz} (x - \mu_1)(z - \mu_3)}{\sigma_1 \sigma_3} - \frac{2 \sigma_{yz} (y - \mu_2)(z - \mu_3)}{\sigma_2 \sigma_3}$$
+
+
+
+表示的是一个椭球面，这种椭球面称为等概率密度曲面，同一椭球曲面上的点具有相同的概率密度值
+
+![Figure_3](https://github.com/user-attachments/assets/cc7e0107-7169-4513-8dea-e184c6b3c93d)
+
+
+
 ---
 
 - 具体来说就是在重建不充分的区域往往会有较大的梯度，我们可以设定一个梯度阈值，对超过梯度阈值的位置我们对椭球进行分裂或者克隆：
