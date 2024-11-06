@@ -63,6 +63,44 @@ $G(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$
 - $\mu$ 是均值
 - $\sigma^2$ 是方差
 
+**二维高斯分布**
+
+对于二维高斯分布，协方差矩阵 $\Sigma$ 是 $2*2$ 的矩阵，均值 $\mu$ 是一个二维向量 $(\mu_1, \mu_2)$ 。公式如下：
+
+$G(\mathbf{x}) = \frac{1}{2\pi |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$
+
+其中：
+
+- $\mathbf{x}$ 是一个二维向量 $(x_1, x_2)$
+- $\mu$ 是均值向量 $(\mu_1, \mu_2)$
+- $\Sigma$ 是协方差矩阵
+
+$$\Sigma = \begin{pmatrix}
+\sigma_{11} & \sigma_{12} \\
+\sigma_{21} & \sigma_{22}
+\end{pmatrix}$$
+
+- $|\Sigma|$是协方差矩阵的行列式
+
+**三维高斯分布**
+
+对于三维高斯分布，协方差矩阵 $\Sigma$ 是 $3*3$ 的矩阵，均值 $\mu$ 是一个三维向量 $(\mu_1, \mu_2, \mu3)$ 。公式如下：
+
+$G(\mathbf{x}) = \frac{1}{(2\pi)^{3/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$
+
+其中：
+
+- $\mathbf{x}$ 是一个三维向量 $(x_1, x_2, x_3)$
+- $\mu$ 是均值向量 $(\mu_1, \mu_2, \mu_3)$
+- $\Sigma$ 是协方差矩阵
+
+$$\Sigma = \begin{pmatrix}
+\sigma_{11} & \sigma_{12} & \sigma_{13} \\
+\sigma_{21} & \sigma_{22} & \sigma_{23} \\
+\sigma_{31} & \sigma_{32} & \sigma_{33}
+\end{pmatrix}$$
+
+- $|\Sigma|$是协方差矩阵的行列式
 
 ---
 
