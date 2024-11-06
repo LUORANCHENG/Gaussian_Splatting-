@@ -208,7 +208,7 @@ $$I = \begin{bmatrix}
 回答：由我们前面可知，对一个高斯分布进行仿射变换
 
 - $w=A \mathbf{x} +b$
-- $\mathbf{w} \sim \mathcal{N}(A \mu + b, A \Sigma A^T)$
+- $\mathbf{w} \sim \mathcal{N}(A \mu + b, A \cdot \Sigma \cdot A^T)$
 
 根据仿射变换的定义可知，这个A的本质就是一个旋转矩阵乘上一个缩放矩阵，即 $A=R \cdot S$
 
