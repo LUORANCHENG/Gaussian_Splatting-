@@ -55,7 +55,7 @@
 
 对于一维高斯分布，协方差矩阵 $\Sigma$ 简化为一个标量 $\sigma$ ,均值 $\mu$ 也是一个标量，公式如下： 
 
-$G(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$
+$$G(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$$
 
 其中：
 
@@ -67,7 +67,7 @@ $G(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}$
 
 对于二维高斯分布，协方差矩阵 $\Sigma$ 是 $2*2$ 的矩阵，均值 $\mu$ 是一个二维向量 $(\mu_1, \mu_2)$ 。公式如下：
 
-$G(\mathbf{x}) = \frac{1}{2\pi |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$
+$$G(\mathbf{x}) = \frac{1}{2\pi |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$$
 
 其中：
 
@@ -86,7 +86,7 @@ $$\Sigma = \begin{pmatrix}
 
 对于三维高斯分布，协方差矩阵 $\Sigma$ 是 $3*3$ 的矩阵，均值 $\mu$ 是一个三维向量 $(\mu_1, \mu_2, \mu3)$ 。公式如下：
 
-$G(\mathbf{x}) = \frac{1}{(2\pi)^{3/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$
+$$G(\mathbf{x}) = \frac{1}{(2\pi)^{3/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (\mathbf{x} - \mu)^T \Sigma^{-1} (\mathbf{x} - \mu)}$$
 
 其中：
 
