@@ -152,11 +152,35 @@ $$\frac{(x - \mu_1)^2}{\sigma_1^2} + \frac{(y - \mu_2)^2}{\sigma_2^2} + \frac{(z
 
 
 
-表示的是一个椭球面，这种椭球面称为等概率密度曲面，同一椭球曲面上的点具有相同的概率密度值
+表示的是一个椭球面，这种椭球面称为等概率密度曲面，同一椭球曲面上的点具有相同的概率密度值。然后多个椭球面构成了一个实心的椭球。所以3D高斯表示的是一个实心的椭球。
 
 ![Figure_3](https://github.com/user-attachments/assets/cc7e0107-7169-4513-8dea-e184c6b3c93d)
 
+**问题3：3D高斯椭球中的各向异性和各向同性是什么意思？**
 
+回答：
+
+- 各向同性：
+  * 在所有方向上都具有相同的扩散程度
+  * 表示的是一个圆球
+  * 协方差矩阵是一个对角矩阵
+ 
+$$\Sigma = \begin{bmatrix} 
+\sigma^2 & 0 & 0 \\ 
+0 & \sigma^2 & 0 \\ 
+0 & 0 & \sigma^2 
+\end{bmatrix}$$
+
+- 各向异性：
+  * 在不同方向具有不同的扩散程度(梯度)
+  * 表示的是一个椭球
+  * 协方差矩阵是对角矩阵
+
+$$\Sigma = \begin{bmatrix} 
+\sigma_x^2 & \sigma_{xy} & \sigma_{xz} \\ 
+\sigma_{yx} & \sigma_y^2 & \sigma_{yz} \\ 
+\sigma_{zx} & \sigma_{zy} & \sigma_z^2 
+\end{bmatrix}$$
 
 ---
 
