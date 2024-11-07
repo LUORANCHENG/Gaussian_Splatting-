@@ -248,8 +248,24 @@ $$\Sigma = A \cdot I \cdot A^T \\
 
 ![image](https://github.com/user-attachments/assets/0d9278d8-21f2-4395-83ec-5a7869709907)
 
+*正交投影*
 
+![image](https://github.com/user-attachments/assets/127ba6d5-d63a-466c-824a-7a75c2424690)
 
+在正交投影中，视锥体是一个立方体，用 $[l,r] * [b,t] * [f,n]$ 去表示，我们需要将这个正方体平移到坐标系的原点，然后缩放至 $[-1, 1]^3$ 的正方体。整个过程是一个仿射变换的过程，仿射变换的矩阵如下所示：
+
+$$M_{\text{ortho}} = \begin{bmatrix} 
+\frac{2}{r - l} & 0 & 0 & 0 \\ 
+0 & \frac{2}{t - b} & 0 & 0 \\ 
+0 & 0 & \frac{2}{n - f} & 0 \\ 
+0 & 0 & 0 & 1 
+\end{bmatrix}
+\begin{bmatrix} 
+1 & 0 & 0 & -\frac{r + l}{2} \\ 
+0 & 1 & 0 & -\frac{t + b}{2} \\ 
+0 & 0 & 1 & -\frac{n + f}{2} \\ 
+0 & 0 & 0 & 1 
+\end{bmatrix}$$
 
 
 
