@@ -297,6 +297,7 @@ n & 0 & 0 & 0 \\
 
 ![image](https://github.com/user-attachments/assets/919c08f5-d453-4ce6-9a25-538b4b2713ec)
 
+**3D高斯中的投影变换**
 
 ---
 
