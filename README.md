@@ -148,7 +148,7 @@ $A x^2 + B y^2 + C z^2 + 2 D x y + 2 E x z + 2 F y z = 1$ 表示引入了旋转�
 
 展开可得： 
 
-$$\frac{(x - \mu_1)^2}{\sigma_1^2} + \frac{(y - \mu_2)^2}{\sigma_2^2} + \frac{(z - \mu_3)^2}{\sigma_3^2} - \frac{2 \sigma_{xy} (x - \mu_1)(y - \mu_2)}{\sigma_1 \sigma_2} - \frac{2 \sigma_{xz} (x - \mu_1)(z - \mu_3)}{\sigma_1 \sigma_3} - \frac{2 \sigma_{yz} (y - \mu_2)(z - \mu_3)}{\sigma_2 \sigma_3}$$
+$$\frac{(x - \mu_1)^2}{\sigma_1^2} + \frac{(y - \mu_2)^2}{\sigma_2^2} + \frac{(z - \mu_3)^2}{\sigma_3^2} - \frac{2 \sigma_{xy} (x - \mu_1)(y - \mu_2)}{\sigma_1 \sigma_2} - \frac{2 \sigma_{xz} (x - \mu_1)(z - \mu_3)}{\sigma_1 \sigma_3} - \frac{2 \sigma_{yz} (y - \mu_2)(z - \mu_3)}{\sigma_2 \sigma_3}=constant$$
 
 
 
