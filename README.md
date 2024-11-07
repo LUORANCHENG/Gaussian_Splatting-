@@ -267,9 +267,22 @@ $$M_{\text{ortho}} = \begin{bmatrix}
 0 & 0 & 0 & 1 
 \end{bmatrix}$$
 
+*透视投影*
 
+![image](https://github.com/user-attachments/assets/c6a5afc8-8caf-493a-9d0f-c82a13944970)
 
+因为透视投影考虑了近大远小的关系，所以会比正交投影稍微复杂一点。首先我们要先把视锥体"压缩"成一个立方体，变换矩阵如下所示，然后我们再去进行正交投影。
 
+$$M_{\text{persp} \rightarrow \text{ortho}} = \begin{bmatrix} 
+n & 0 & 0 & 0 \\ 
+0 & n & 0 & 0 \\ 
+0 & 0 & n + f & -nf \\ 
+0 & 0 & 1 & 0 
+\end{bmatrix}$$
+
+但是采用透视投影我们会遇到一个问题：透视投影是非线性的，即非仿射变换，如下图所示。但是我们希望高斯椭球进行的仿射变换，这个问题要怎么解决？
+
+![image](https://github.com/user-attachments/assets/919c08f5-d453-4ce6-9a25-538b4b2713ec)
 
 
 ---
