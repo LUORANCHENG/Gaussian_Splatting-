@@ -244,14 +244,14 @@ $$\Sigma = A \cdot I \cdot A^T \\
 
 物理坐标系
 - 高斯核中心 $t_k = [t_0 \quad t_1 \quad t_2]^T$
-- $V'_k$ 是协方差矩阵
+- $V''_k$ 是协方差矩阵
 
 经过一个仿射变换 $u = \varphi(t) = Wt + d$ 从物理坐标系转换到相机坐标系
 
 相机坐标系
 - 均值 $u_k = W t_k + d$
 - 高斯核中心 $u_k = [u_0 \quad u_1 \quad u_2]^T$
-- 协方差矩阵 $V_k = W V'_k W^T$
+- 协方差矩阵 $V'_k = W V''_k W^T$
 
 **投影变换**
 
