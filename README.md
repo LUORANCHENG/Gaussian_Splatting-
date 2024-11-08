@@ -309,7 +309,7 @@ n & 0 & 0 & 0 \\
 
 采用透视投影处理协方差矩阵时我们会遇到一个问题：透视投影是非线性的，即非仿射变换，如下图所示。非仿射变换是不可以用于处理协方差矩阵的，这个问题要怎么解决？
 
-![image](https://github.com/user-attachments/assets/919c08f5-d453-4ce6-9a25-538b4b2713ec)
+![image](https://github.com/user-attachments/assets/ac8f45d8-53a8-4683-9b27-6bd0704ec91e)
 
 **作者为了解决这个问题引入了雅可比矩阵**
 
@@ -326,6 +326,7 @@ $$f_2(x,y)=y+sin(x)$$
 
 
 然后我们求这个非线性变换的雅可比矩阵，雅可比矩阵中的每个元素都是对函数的一阶偏导数，即：
+
 ![image](https://github.com/user-attachments/assets/6c3ffd56-2b86-4285-acea-f548db607f9c)
 
 
