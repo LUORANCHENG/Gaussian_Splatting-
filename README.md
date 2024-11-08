@@ -400,6 +400,22 @@ $V_k = J V'_k J^T = J W V''_k W^T J^T$
 
 **视口变换**
 
+根据我们前面所说的，我们还需要对处于NDC坐标系中的均值进行一个视口变换
+
+![image](https://github.com/user-attachments/assets/5f8eda53-e212-4a2e-ab41-1cfe8eafd259)
+
+
+视口变换与z无关，它的作用是将 $[-1, 1]^2$ 的矩形变换至 $[0, w] * [0, h]$
+
+变换矩阵为：
+
+$$M_{\text{viewport}} = \begin{bmatrix}
+\frac{w}{2} & 0 & 0 & \frac{w}{2} \\
+0 & \frac{h}{2} & 0 & \frac{h}{2} \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
 ---
 
 - 具体来说就是在重建不充分的区域往往会有较大的梯度，我们可以设定一个梯度阈值，对超过梯度阈值的位置我们对椭球进行分裂或者克隆：
