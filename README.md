@@ -540,6 +540,13 @@ $$C = \sum_{i \in N} c_i \alpha_i \prod_{j=1}^{i-1} (1 - \alpha_j)$$
 
 ![image](https://github.com/user-attachments/assets/dec0c859-6aa6-4b67-b1b6-20206cc15b1f)
 
+---
 
+## 总结
 
+![process](https://github.com/user-attachments/assets/8974e12f-1f00-49eb-bfca-443eb8f00d86)
+
+很好，你又掌握了一篇论文🎉🎉🎉
+
+![Suggestion](https://github.com/user-attachments/assets/a1b2148d-0633-4785-88e9-ad5d6b1d3eab)
 
