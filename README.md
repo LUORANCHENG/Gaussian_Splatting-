@@ -10,6 +10,8 @@
 
 [三维重建\渲染算法3D Gaussian Splatting详解](https://www.bilibili.com/video/BV1My411h7tt/?spm_id_from=333.337.search-card.all.click&vd_source=1a02178b1644ddc9b579739c3c1616b4)
 
+[GAMES101-现代计算机图形学入门-闫令琪](https://www.bilibili.com/video/BV1X7411F744/?spm_id_from=333.337.search-card.all.click&vd_source=1a02178b1644ddc9b579739c3c1616b4)
+
 
 ## Gaussian Splatting的整体流程解读
 
