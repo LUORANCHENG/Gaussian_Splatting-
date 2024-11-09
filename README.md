@@ -519,13 +519,26 @@ $$C = \sum_{i \in N} c_i \alpha_i \prod_{j=1}^{i-1} (1 - \alpha_j)$$
 - Pruning：减少伪影出现
 - Densification：处理过度重建和欠重建
 
----
+**Pruning操作**
 
+为了稳定计算过程，先以较低分辨率（4倍下采样）预热计算，在250次和500次迭代时进行两次上采样。
+
+在预热之后，每经过100次迭代就增加密度，并移除基本透明的Gaussian，即 $\alpha < \varepsilon_{\alpha}$ 的Gaussian。
+
+每经过1000次迭代移除不透明度小于阈值的点，周期性将不透明度重置为0以去除漂浮物，并移除形状较大点避免重叠。
+
+每经过3000次迭代将 $\alpha$ 设置为接近0，然后优化，在需要的Gaussian上增加 $\alpha$ ，并剔除 $\alpha < \varepsilon_{\alpha}$ 的Gaussian。
+
+经过Pruning操作可以有效去除伪影
+
+![image](https://github.com/user-attachments/assets/cf23b1e0-cc53-4974-9b8c-9665be9bc367)
+
+**Densification操作**
 - 具体来说就是在重建不充分的区域往往会有较大的梯度，我们可以设定一个梯度阈值，对超过梯度阈值的位置我们对椭球进行分裂或者克隆：
   * 对于方差大的位置，说明椭球的形状大，我们需要对椭球进行分裂
   * 对于方差小的位置，说明椭球的形状小，我们需要对椭球进行克隆
-如果我们按照上面的流程做下来，我们会发现一个问题：就是我们虽然可以优化每个椭球的形状，颜色，透明度等，但我们始终无法改变点云的数量，强烈依赖sfm生成的初始点云数量。
 
+![image](https://github.com/user-attachments/assets/dec0c859-6aa6-4b67-b1b6-20206cc15b1f)
 
 
 
