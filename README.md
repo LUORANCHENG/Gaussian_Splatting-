@@ -1,5 +1,16 @@
 # Gaussian Splatting论文阅读笔记
 
+## 参考项目
+
+[原论文地址](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_high.pdf)
+
+[Gaussian Splatting官方仓库](https://github.com/graphdeco-inria/gaussian-splatting)
+
+[【较真系列】讲人话-3d gaussian splatting全解(原理+代码+公式)](https://www.bilibili.com/video/BV1zi421v7Dr?spm_id_from=333.788.videopod.sections&vd_source=1a02178b1644ddc9b579739c3c1616b4)
+
+[三维重建\渲染算法3D Gaussian Splatting详解](https://www.bilibili.com/video/BV1My411h7tt/?spm_id_from=333.337.search-card.all.click&vd_source=1a02178b1644ddc9b579739c3c1616b4)
+
+
 ## Gaussian Splatting的整体流程解读
 
 首先先用一句话来概括3D高斯：从已有的点云模型出发，以每个点为中心，建立可学习的3D高斯表达，并用Splatting也即抛雪球的方法进行渲染。
